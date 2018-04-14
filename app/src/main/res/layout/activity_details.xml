@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.barts.pullupcounter.pullupcounter.Activities.DetailsActivity">
+
+    <TextView
+        android:id="@+id/dateDetID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Mon, 02.12.1994"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TableRow
+        android:id="@+id/row1ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateDetID"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/chinupsDetID"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/chinups"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/chLessButtonDetID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/minus_icon" />
+
+        <TextView
+            android:id="@+id/chinupsCountDetID"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="100"
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/chMoreButtonDetID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/plus_icon" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row2ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row1ID"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/chinupsWithBandDetID"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/assisted_chinups"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/chWBLessButtonDetID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/minus_icon" />
+
+        <TextView
+            android:id="@+id/chinupsWithBandCountDetID"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="100"
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/chWBMoreButtonDetID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/plus_icon" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row3ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row2ID"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/pullupsDetID"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pullups"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/pLessButtonDetID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/minus_icon" />
+
+        <TextView
+            android:id="@+id/pullupsCountDetID"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="100"
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/pMoreButtonDetID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/plus_icon" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row4ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row3ID"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/pullupsWithBandDetID"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/assisted_pullups"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/pWBLessButtonDetID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/minus_icon" />
+
+        <TextView
+            android:id="@+id/pullupsWithBandCountDetID"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="100"
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/pWBMoreButtonDetID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/plus_icon" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/applyDetID"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Apply"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row4ID"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

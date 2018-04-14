@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PullUpCounter</string>
+    <string name="add_first_rep">Add First Repetition</string>
+    <string name="new_entry">New Entry</string>
+    <string name="chinups">Chin-ups</string>
+    <string name="assisted_chinups">Assisted Chin-ups</string>
+    <string name="pullups">Pull-ups</string>
+    <string name="assisted_pullups">Assisted Pull-ups</string>
+    <string name="create_entry">Create Entry</string>
+    <string name="title_activity_item_list">ItemListActivity</string>
+    <string name="delete_question">Delete this entry?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+</resources>
