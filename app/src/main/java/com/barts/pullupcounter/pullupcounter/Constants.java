@@ -2,6 +2,7 @@ package com.barts.pullupcounter.pullupcounter;
 
 import com.barts.pullupcounter.pullupcounter.Model.DailyEntry;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -38,6 +39,20 @@ public class Constants {
         if(today.equals(dateS))
             return true;
         else return false;
+    }
+
+    public static long convertStringDateToLong(String sDate){
+        SimpleDateFormat ft = new SimpleDateFormat ("E, dd.MM.yyyy");
+
+        Date date = new Date();
+
+        try {
+            date = ft.parse(sDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return date.getTime();
     }
 
 
