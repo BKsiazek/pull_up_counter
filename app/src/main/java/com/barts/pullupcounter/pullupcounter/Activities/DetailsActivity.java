@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
+import com.barts.pullupcounter.pullupcounter.Constants;
 import com.barts.pullupcounter.pullupcounter.Data.DBHandler;
 import com.barts.pullupcounter.pullupcounter.Model.DailyEntry;
 import com.barts.pullupcounter.pullupcounter.R;
@@ -37,7 +38,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         adapterPosition = bundle.getInt("adapterPosition");
         clickedEntry = ItemListActivity.recyclerViewAdapter.dailyEntries.get(adapterPosition);
 
-        dateTV.setText(clickedEntry.getDate());
+        dateTV.setText(Constants.getDateToShow(clickedEntry.getDate()));
         chinupsCountTV.setText(String.valueOf(clickedEntry.getChinupsCount()));
         assistedChinupsCountTV.setText(String.valueOf(clickedEntry.getAssistedChinups()));
         pullupsCountTV.setText(String.valueOf(clickedEntry.getPullupsCount()));

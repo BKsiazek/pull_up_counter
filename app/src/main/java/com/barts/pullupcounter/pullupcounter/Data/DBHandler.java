@@ -24,7 +24,7 @@ public class DBHandler extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         String CREATE_DAILY_ENTRY_TABLE = "CREATE TABLE " + Constants.TABLE_NAME + "("
                 + Constants.KEY_ID + " INTEGER PRIMARY KEY," + Constants.KEY_DATE
-                + " LONG," + Constants.KEY_P_UPS + " INTEGER," + Constants.KEY_ASSISTED_P_UPS
+                + " TEXT," + Constants.KEY_P_UPS + " INTEGER," + Constants.KEY_ASSISTED_P_UPS
                 + " INTEGER," + Constants.KEY_CH_UPS + " INTEGER," + Constants.KEY_ASSISTED_CH_UPS + " INTEGER);";
 
         db.execSQL(CREATE_DAILY_ENTRY_TABLE);
@@ -38,7 +38,7 @@ public class DBHandler extends SQLiteOpenHelper{
 
     public long addEntry(DailyEntry entry){
         ContentValues values = new ContentValues();
-        values.put(Constants.KEY_DATE, Constants.convertStringDateToLong(entry.getDate()));
+        values.put(Constants.KEY_DATE, /*Constants.convertStringDateToLong(*/entry.getDate());
         values.put(Constants.KEY_P_UPS, entry.getPullupsCount());
         values.put(Constants.KEY_ASSISTED_P_UPS, entry.getAssistedPullups());
         values.put(Constants.KEY_CH_UPS, entry.getChinupsCount());
@@ -100,10 +100,10 @@ public class DBHandler extends SQLiteOpenHelper{
         entry.setAssistedPullups(cursor.getInt(cursor.getColumnIndex(Constants.KEY_ASSISTED_P_UPS)));
         entry.setChinupsCount(cursor.getInt(cursor.getColumnIndex(Constants.KEY_CH_UPS)));
         entry.setAssistedChinups(cursor.getInt(cursor.getColumnIndex(Constants.KEY_ASSISTED_CH_UPS)));
-        //entry.setDate(cursor.getString(cursor.getColumnIndex(Constants.KEY_DATE)));
+        entry.setDate(cursor.getString(cursor.getColumnIndex(Constants.KEY_DATE)));
 
-        long dateLong = cursor.getLong(cursor.getColumnIndex(Constants.KEY_DATE));
-        entry.setDate(Constants.convertDateToString(new Date(dateLong)));
+        //long dateLong = cursor.getLong(cursor.getColumnIndex(Constants.KEY_DATE));
+        //entry.setDate(Constants.convertDateToString(new Date(dateLong)));
 
         return entry;
     }
@@ -116,7 +116,8 @@ public class DBHandler extends SQLiteOpenHelper{
         values.put(Constants.KEY_ASSISTED_P_UPS, entry.getAssistedPullups());
         values.put(Constants.KEY_CH_UPS, entry.getChinupsCount());
         values.put(Constants.KEY_ASSISTED_CH_UPS, entry.getAssistedChinups());
-        values.put(Constants.KEY_DATE, Constants.convertStringDateToLong(entry.getDate()));
+        //values.put(Constants.KEY_DATE, Constants.convertStringDateToLong(entry.getDate()));
+        values.put(Constants.KEY_DATE, entry.getDate());
 
         return db.update(Constants.TABLE_NAME, values, Constants.KEY_ID + "=?", new String[]{String.valueOf(entry.getId())});
     }
